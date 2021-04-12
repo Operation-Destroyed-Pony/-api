@@ -51,7 +51,20 @@ namespace Destroyed.Pony.Api.Controllers
 
         [HttpPut("{id:int}")]
         public IActionResult PutItem(int id, [FromBody] Item item) {
-            return Ok();
+            if (id != item.Id)
+            {
+                return BadRequest();
+            }
+
+            if (_db.Items.Find(id) = null)
+            {
+                return NotFound();
+            }
+
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+
+            return NoContent();
         }
 
         [HttpDelete]
