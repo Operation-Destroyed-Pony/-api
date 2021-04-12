@@ -1,11 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace Destroyed.Pony.Domain.Catalog
 {
-    using System.Collections.Generic;
     public class Item
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Brand { get; set; }
@@ -36,8 +36,6 @@ namespace Destroyed.Pony.Domain.Catalog
             this.Description = description;
             this.Brand = brand;
             this.Price = price;
-
-
         }
         public void AddRating(Rating rating)
         {
@@ -46,31 +44,7 @@ namespace Destroyed.Pony.Domain.Catalog
     }
 
 
-    public class Rating
-    {
-        public int Id { get; set; }
-        public int Star { get; set; }
-        public string UserName { get; set; }
-        public string Review { get; set; }
 
-        public Rating(int stars, string userName, string review)
-        {
-            if (stars < 1 || stars > 5)
-            {
-                throw new ArgumentException("Star rating must be an integer: 1, 2, 3, 4, or 5.");
-            }
-
-            if (string.IsNullOrEmpty(userName))
-            {
-                throw new ArgumentException("UserName cannot be null.");
-            }
-
-            this.Star = stars;
-            this.UserName = userName;
-            this.Review = review;
-        }
-
-    }
 
 
 

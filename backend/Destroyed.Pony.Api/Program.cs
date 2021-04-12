@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Destroyed.Pony.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -34,11 +36,11 @@ namespace Destroyed.Pony.Api
 
                 try
                 {
-                    var context = service.GetRequiredService<StoreContext>();
+                    var context = services.GetRequiredService<StoreContext>();
                     context.Database.EnsureCreated();
                     DBInitializer.Initialize(context, logger);
                 }
-                catch (Excepttion ex)
+                catch (Exception ex)
                 {
                     logger.LogError(ex, "Error occured creating the database.");
                 }

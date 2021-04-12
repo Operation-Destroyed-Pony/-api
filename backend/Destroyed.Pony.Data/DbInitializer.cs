@@ -1,14 +1,14 @@
 using Destroyed.Pony.Domain.Catalog;
-using Microsoft.Extentions.Logging;
-using System.Linq
+using Microsoft.Extensions.Logging;
+using System.Linq;
 
 namespace Destroyed.Pony.Data
 {
-    public static class DbInitializer
+    public static class DBInitializer
     {
         public static void Initialize(StoreContext context, ILogger logger)
         {
-            if(!context.Items.Any())
+            if (!context.Items.Any())
             {
                 var items = new Item[]
                 {

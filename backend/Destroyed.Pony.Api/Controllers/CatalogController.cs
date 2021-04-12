@@ -25,7 +25,7 @@ namespace Destroyed.Pony.Api.Controllers
         public IActionResult GetItem(int id)
         {
             var item = new Item("Shirt", "Ohio State Shirt.", "Nike", 29.99m);
-            item.ID = id;
+            item.Id = id;
 
             return Ok(item);
         }
@@ -39,7 +39,7 @@ namespace Destroyed.Pony.Api.Controllers
         public IActionResult PostRating(int id, [FromBody] Rating rating)
         {
             var item = new Item("Shirt", "Ohio State shirt", "Nike", 29.99m);
-            item.ID = id;
+            item.Id = id;
             item.AddRating(rating);
 
             return Ok(item);
