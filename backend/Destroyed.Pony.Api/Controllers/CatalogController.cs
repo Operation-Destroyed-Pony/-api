@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Destroyed.Pony.Domain.Catalog;
 using System.Collections.Generic;
+using Destroyed.Pony.Data;
 
 namespace Destroyed.Pony.Api.Controllers
 {
@@ -8,16 +9,16 @@ namespace Destroyed.Pony.Api.Controllers
     [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
+        private readonly StoreContext _db;
+        public CatalogController(StoreContext db)
+        {
+            _db = db;
+        }
+
         [HttpGet]
         public IActionResult GetItems()
         {
-            var items = new List<Item>()
-            {
-                new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m),
-                new Item ("Shorts", "Ohio State shorts", "Nike", 44.99m)
-            };
-
-            return Ok(items);
+            return Ok(_db.Items);
         }
 
         [HttpGet("{id:int}")]
