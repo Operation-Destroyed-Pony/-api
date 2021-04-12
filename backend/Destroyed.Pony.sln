@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Destroyed.Pony.Api", "Destr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Destroyed.Pony.Domain", "Destroyed.Pony.Domain\Destroyed.Pony.Domain.csproj", "{96A5295F-7E1A-4FAB-8DCE-806B25C564CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Destroyed.Pony.Data", "Destroyed.Pony.Data\Destroyed.Pony.Data.csproj", "{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{96A5295F-7E1A-4FAB-8DCE-806B25C564CF}.Release|x64.Build.0 = Release|Any CPU
 		{96A5295F-7E1A-4FAB-8DCE-806B25C564CF}.Release|x86.ActiveCfg = Release|Any CPU
 		{96A5295F-7E1A-4FAB-8DCE-806B25C564CF}.Release|x86.Build.0 = Release|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Debug|x64.Build.0 = Debug|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Debug|x86.Build.0 = Debug|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Release|x64.ActiveCfg = Release|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Release|x64.Build.0 = Release|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Release|x86.ActiveCfg = Release|Any CPU
+		{ECEDE8BC-3775-48DD-B773-C07A4D7E1D67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

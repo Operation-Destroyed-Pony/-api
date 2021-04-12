@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Destroyed.Pony.Domain\Destroyed.Pony.Domain.csproj" />
+    <ProjectReference Include="..\Destroyed.Pony.Data\Destroyed.Pony.Data.csproj" />
   </ItemGroup>
 
 </Project>
