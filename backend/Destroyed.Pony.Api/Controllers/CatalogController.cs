@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Destroyed.Pony.Domain.Catalog;
 using System.Collections.Generic;
 using Destroyed.Pony.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Destroyed.Pony.Api.Controllers
 {
@@ -61,11 +62,10 @@ namespace Destroyed.Pony.Api.Controllers
                 return BadRequest();
             }
 
-            if (_db.Items.Find(id) = null)
+            if (_db.Items.Find(id) == null)
             {
                 return NotFound();
             }
-
             _db.Entry(item).State = EntityState.Modified;
             _db.SaveChanges();
 

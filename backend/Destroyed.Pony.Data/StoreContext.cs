@@ -1,4 +1,5 @@
 ﻿using Destroyed.Pony.Domain.Catalog;
+using Destroyed.Pony.Domain.Orders;
 using Microsoft.EntityFrameworkCore;
 
 namespace Destroyed.Pony.Data

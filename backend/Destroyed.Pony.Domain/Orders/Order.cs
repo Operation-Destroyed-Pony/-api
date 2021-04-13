@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Destroyed.Pony.Domain.Orders
 {
-    public class Orders
+    public class Order
     {
         public int Id { get; set; }
         public List<OrderItem> Items { get; set; }
