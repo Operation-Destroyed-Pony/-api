@@ -72,7 +72,7 @@ namespace Destroyed.Pony.Api.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public IActionResult DeleteItem(int id) {
             var item = _db.Items.Find(id);
             if (item == null)
