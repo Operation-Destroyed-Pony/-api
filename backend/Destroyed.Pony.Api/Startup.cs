@@ -37,6 +37,13 @@ namespace Destroyed.Pony.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Destroyed.Pony.Api", Version = "v1" });
             });
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("x");
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +66,8 @@ namespace Destroyed.Pony.Api
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors();
         }
     }
 }
