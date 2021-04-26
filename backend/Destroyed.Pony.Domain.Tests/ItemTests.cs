@@ -1,10 +1,11 @@
-using Destroyed.Pony.Domain.Tests.RatingTests.cs;
+using Destroyed.Pony.Domain.Catalog;
+using Destroyed.Pony.Domain.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Destroyed.Pony.Domain.Tests
 {
     [TestClass]
-    public class RatingTests
+    public class ItemTests
     {
         [TestMethod]
         public void Can_Create_New_Item()
