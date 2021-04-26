@@ -32,6 +32,14 @@ namespace Destroyed.Pony.Api
                 opt.UseSqlite(Configuration.GetConnectionString("LocalDb"),
                 b => b.MigrationsAssembly("Destroyed.Pony.Api")));
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("*");
+                });
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -48,6 +56,8 @@ namespace Destroyed.Pony.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Destroyed.Pony.Api v1"));
             }
+
+            app.UseCors();
 
             app.UseHttpsRedirection();
 
