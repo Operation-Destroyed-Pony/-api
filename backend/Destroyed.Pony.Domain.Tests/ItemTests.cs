@@ -10,7 +10,7 @@ namespace Destroyed.Pony.Domain.Tests
         [TestMethod]
         public void Can_Create_New_Item()
         {
-            var item = new Item("Name", "Description", "Brand", 10.00m);
+            var item = new Item("Name", "Description", "Brand","/images/d1.jpg", 10.00m);
 
             Assert.AreEqual("Name", item.Name);
             Assert.AreEqual("Description", item.Description);
@@ -23,7 +23,7 @@ namespace Destroyed.Pony.Domain.Tests
         {
 
             // Arrange
-            var item = new Item("Name", "Description", "Brand", 10.00m);
+            var item = new Item("Name", "Description", "Brand","/images/d1.jpg", 10.00m);
             var rating = new Rating(5, "Name", "Review");
 
             //Act

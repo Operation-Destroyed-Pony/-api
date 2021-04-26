@@ -9,16 +9,21 @@ namespace Destroyed.Pony.Domain.Catalog
         public string Name { get; set; }
         public string Description { get; set; }
         public string Brand { get; set; }
+        public string ImageUrl { get; set; }
         public decimal Price { get; set; }
         public List<Rating> Ratings { get; set; }
 
-        public Item(string name, string description, string brand, decimal price)
+        public Item(string name, string description, string brand, string imageUrl, decimal price)
         {
             if (string.IsNullOrEmpty(name))
             {
                 throw new ArgumentException("Item name cannot be null.");
 
             }
+            if (string.IsNullOrEmpty(imageUrl)){
+                throw new ArgumentException("Image path cannot be null.");
+            }
+
             if (string.IsNullOrEmpty(description))
             {
                 throw new ArgumentException("Item tdescription cannot be null.");
@@ -36,6 +41,7 @@ namespace Destroyed.Pony.Domain.Catalog
             this.Description = description;
             this.Brand = brand;
             this.Price = price;
+            this.ImageUrl = imageUrl;
         }
         public void AddRating(Rating rating)
         {
