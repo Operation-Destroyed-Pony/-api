@@ -42,6 +42,7 @@ namespace Destroyed.Pony.Domain.Catalog
             this.Brand = brand;
             this.Price = price;
             this.ImageUrl = imageUrl;
+            this.Ratings = new List<Rating>();
         }
         public void AddRating(Rating rating)
         {
